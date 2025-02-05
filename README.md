@@ -120,7 +120,7 @@ Setting Up Shared Directory
 
 # Markdown and Linux Exercise
 
-## Author - Rashmika Dineth Ruwanpathirana - BEIRP24A6
+## Author - Fatiha Mahmud Dheera - BEIRP24A6
 
 ---
 
