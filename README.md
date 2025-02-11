@@ -215,4 +215,97 @@ The name **markdown_linux_harjoitus** used as the directory name
 
 ---
 
+Assingment 6 - APT
+Objective:
+By completing this assignment, you will:
 
+✅ Learn how to install, update, remove, and search for software using APT (Advanced Package Tool).
+✅ Understand how to manage repositories and resolve package dependencies.
+✅ Gain hands-on experience in troubleshooting package installation issues.
+Instructions
+Perform the following tasks step by step, documenting your commands and outputs. If you encounter any errors, note them and describe how you resolved them.
+
+Part 1: Understanding APT & System Updates (15 min)
+Check your system’s APT version:
+Run the following command to display the installed APT version: apt --version
+
+Record the output.
+
+
+
+Update the package list:
+Run the command: sudo apt update
+
+
+Explain why this step is important.
+This will check with the current installed versions and the latest stable versions that you can download
+
+- Get the latest package information
+- Check whats need to be updated
+- Get the security and bug fixes paches
+- Update packages without dependancy issues
+Upgrade installed packages:
+Run: sudo apt upgrade -y
+
+
+What is the difference between update and upgrade?
+
+upgrade: This will update the packages in the linux system.
+
+update: This will list down the updatable packages in the system without updating them.
+
+View pending updates (if any):
+Run: apt list --upgradable
+Take note of any pending updates.
+
+
+Part 2: Installing & Managing Packages (20 min)
+Search for a package using APT:
+Find an image editor using: apt search image editor
+
+
+Pick one package from the list and write down its name.
+xpaint/noble 2.9.1.4-4.1build2 amd64 simple paint program for X
+
+View package details:
+Get detailed information about the selected package: apt show
+What dependencies does it require?
+Install the package:
+Run: sudo apt install -y
+Confirm that the package is successfully installed.
+Check installed package version:
+Run: apt list --installed | grep
+What version was installed?
+Part 3: Removing & Cleaning Packages (10 min)
+Uninstall the package:
+Run: sudo apt remove -y
+Is the package fully removed?
+Remove configuration files as well:
+Run: sudo apt purge -y
+What is the difference between remove and purge?
+Clear unnecessary package dependencies:
+Run: sudo apt autoremove -y
+Why is this step important?
+Clean up downloaded package files:
+Run: sudo apt clean
+What does this command do?
+Part 4: Managing Repositories & Troubleshooting (15 min)
+List all APT repositories:
+Run: cat /etc/apt/sources.list
+What do you notice in this file?
+Add a new repository (example: universe repository):
+Run: sudo add-apt-repository universe sudo apt update
+What types of packages are found in the universe repository?
+Simulate an installation failure and troubleshoot:
+Try installing a non-existent package: sudo apt install fakepackage
+What error message do you get?
+How would you troubleshoot this issue?
+Submission Requirements
+A markdown document containing:
+The commands you used.
+Screenshots (if possible) of important outputs.
+Answers to the questions provided in each step.
+Submit your work via GitHub repository URL.
+Bonus Challenge (Optional):
+Use apt-mark to hold and unhold a package so it doesn't get updated. sudo apt-mark hold sudo apt-mark unhold
+Why would you want to hold a package?
